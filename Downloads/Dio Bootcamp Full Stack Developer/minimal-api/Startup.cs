@@ -65,18 +65,32 @@ builder.Services.AddDbContext<DbContexto>(options => {
     );
 });
 
+Services.AddCors(options =>
+     {
+        options.AddDeaultPolicy(
+            builder =>
+            {
+                builder.allowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            };
+        )
+     });
 }
 
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
-    
+    app.UseRouting();
      app.UseSwagger();
      app.UseSwaggerUI();
 
      app.UseAuthentication();
      app.UseAuthorization();
 
-     app.UseRouting();
+     
+     app.UseCors();
+
+     
 
     app.UseEndpoints(endpoints => {
 
