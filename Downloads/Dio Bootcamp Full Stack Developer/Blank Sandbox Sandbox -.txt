@@ -1,4 +1,0 @@
-NEO4J_URI=bolt://3.238.195.101
-NEO4J_USERNAME=neo4j
-NEO4J_PASSWORD=compressors-insignia-blackboard
-NEO4J_DATABASE=neo4j
