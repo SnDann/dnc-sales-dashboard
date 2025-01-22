@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\API do tempo\\API Tempo DIO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2AD8860E-C95C-49D6-879C-C9F219186544}|API Tempo DIO\\API Tempo DIO.csproj|g:\\api do tempo\\api tempo dio\\api tempo dio\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2AD8860E-C95C-49D6-879C-C9F219186544}|API Tempo DIO\\API Tempo DIO.csproj|solutionrelative:api tempo dio\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "G:\\API do tempo\\API Tempo DIO\\API Tempo DIO\\Dockerfile",
+              "RelativeDocumentMoniker": "API Tempo DIO\\Dockerfile",
+              "ToolTip": "G:\\API do tempo\\API Tempo DIO\\API Tempo DIO\\Dockerfile",
+              "RelativeToolTip": "API Tempo DIO\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-22T17:45:02.413Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
