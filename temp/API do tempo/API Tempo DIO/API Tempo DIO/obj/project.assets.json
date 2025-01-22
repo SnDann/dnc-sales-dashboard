@@ -540,11 +540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\API do tempo\\API Tempo DIO\\API Tempo DIO\\API Tempo DIO.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\temp\\API do tempo\\API Tempo DIO\\API Tempo DIO\\API Tempo DIO.csproj",
       "projectName": "API Tempo DIO",
-      "projectPath": "G:\\API do tempo\\API Tempo DIO\\API Tempo DIO\\API Tempo DIO.csproj",
+      "projectPath": "C:\\Users\\Daniel\\temp\\API do tempo\\API Tempo DIO\\API Tempo DIO\\API Tempo DIO.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "G:\\API do tempo\\API Tempo DIO\\API Tempo DIO\\obj\\",
+      "outputPath": "C:\\Users\\Daniel\\temp\\API do tempo\\API Tempo DIO\\API Tempo DIO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
