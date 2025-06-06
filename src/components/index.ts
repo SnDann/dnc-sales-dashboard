@@ -1,9 +1,9 @@
-export * from '../components/BannerImage';
-    export * from '../components/Logo';
-    export * from '../components/StyledButton';
-    export * from '../components/StyledInput';
-    export * from '../types/typographies';
-    export * from './CardComponent';
-    export { default as FormComponent } from '../types/form.Component';
-    export { default as Header } from '../components/Header'
-
+export * from './BannerImage'
+export * from './Logo'
+export * from './StyledButton'
+export * from './StyledInput'
+export * from './Typographies'
+export * from './CardComponent'
+export { default as FormComponent } from './FormComponent'
+export { default as Header } from './Header'
+export { default as AvatarList } from './AvatarList'
