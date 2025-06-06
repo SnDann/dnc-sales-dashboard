@@ -1,32 +1,37 @@
-import styled from 'styled-components';
-import { StyledButton, StyledInput } from '@/pages';
-import { FormComponentPropos} from '@/pages';
-import { pxToRem } from '@/utils';
+import styled from 'styled-components'
+import { pxToRem } from '@/utils'
+import type { FormComponentProps } from '@/types/form.Component' // type-only import
 
+import { StyledButton } from './StyledButton'
+import { StyledInput } from './StyledInput'
 
 export const StyledForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    row-gap: ${pxToRem(16)};
-    `;
-function FormComponent(props: FormComponentProps) {
-    const { input, buttons, message } = props
-    return (
-      <form>
-           {input.map((inputProps, index) => (
-               <StyledInput key={index} {...inputProps} />
-            ))}
-            {buttons.map((buttonProps, index) => (
-               <StyledButton key={index} {...buttonProps} />
-            ))}
-            {
-                message && (
-                    <div style={{ color: message.type === 'error' ? 'red' : 'green'}}>
-                    {message.message}
-                    </div>
-                )
-            }
-       </form>
-    )
+  display: flex;
+  flex-direction: column;
+  row-gap: ${pxToRem(16)};
+`
+
+function FormComponent({
+  inputs,
+  buttons,
+  message,
+}: Readonly<FormComponentProps>) {
+  return (
+    <StyledForm>
+      {inputs.map((inputProps, idx) => (
+        <StyledInput
+          key={inputProps.name ?? inputProps.type ?? idx}
+          {...inputProps}
+        />
+      ))}
+      {buttons.map((buttonProps, idx) => (
+        <StyledButton key={buttonProps.type ?? idx} {...buttonProps} />
+      ))}
+      {message && (
+        <div className={`form-message ${message.type}`}>{message.message}</div>
+      )}
+    </StyledForm>
+  )
 }
-export default FormComponent;
+
+export default FormComponent

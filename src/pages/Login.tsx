@@ -1,53 +1,46 @@
-import {Box, Container, Grid} from '@mui/material';
-import {BannerImage, FormComponent, StyledH1, StyledP, Logo } from '@/pages';
-import { pxToRem } from '@/utils';
+import { Box, Container, Grid } from '@mui/material'
+import { FormComponent, StyledH1, Styledp, Logo } from '@/components'
+import { pxToRem } from '@/utils'
 
 function Login() {
   return (
-    <>
-    <Box>
+    <Container>
       <Grid container>
-      <Grid 
-       item xs={12}
-        sm={6}
-         sx={{alignItems: 'center', height: '100vh'}}
-         >
-      <Container maxWidth="sm">
-        <Box sx={{ marginBottom: pxToRem(24) }}><Logo heigth={41} width={100} /></Box>
-        <Box sx={{ marginBottom: pxToRem(24) }}>
-          <StyledH1>Bem vindo</StyledH1>
-          <StyledP>Entre com seu email e senha</StyledP>
+        <Box
+          sx={{
+            alignItems: 'center',
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <Container maxWidth="sm">
+            <Box sx={{ marginBottom: pxToRem(24) }}>
+              <Logo height={41} width={100} />
+            </Box>
+            <Box sx={{ marginBottom: pxToRem(24) }}>
+              <StyledH1>Bem vindo</StyledH1>
+              <Styledp>Entre com seu email e senha</Styledp>
+            </Box>
+            <FormComponent
+              inputs={[
+                { type: 'email', placeholder: 'Email', disabled: true },
+                { type: 'password', placeholder: 'Password' },
+              ]}
+              buttons={[
+                { className: 'login-btn', type: 'submit', children: 'Login' },
+              ]}
+              message={{ type: 'success', message: 'Login successful!' }}
+            />
+            <Container maxWidth="sm">
+              <h1>CADASTRO</h1>
+            </Container>
+          </Container>
         </Box>
-        <FormComponent inputs={[
-          {type: 'email', placeholder: 'Email', disabled: true},
-          {type: 'password', placeholder: 'Password'}
-        ]} 
-        />
-        </Container>
       </Grid>
-      <Grid>
-       item
-        sm={6}
-         sx={{display: {xs: 'none', sm: 'block'},
-        }}
-        button = {[
-          { className: 'primary', type: 'submit', children: 'Login' },
-        ]}
-        message = {{ type: 'success', message: 'Sucesso!!!' }}
-         />
-         <Container maxWidth="sm">
-        <h1>CADASTRO</h1>
-      </Grid>
-      <Grid>
-       item
-        sm={6}
-         sx={{ display: { xs: 'none', sm: 'block' } }}>
-        <BannerImage />
-      </Grid>
-      </Grid>
-     </Box>
-    </>
+    </Container>
   )
 }
 
-export default Login;
+export default Login
