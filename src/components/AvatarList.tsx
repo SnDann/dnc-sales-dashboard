@@ -1,26 +1,20 @@
 import React from 'react'
 import { Box, Avatar } from '@mui/material'
-import type { AvatarsList as AvatarsListType } from '@/types/avatarsList'
+
+import type { AvatarsList } from '../types/avatarsList'
 
 interface AvatarListProps {
-  avatars: {
-    avatar: string
-    name: string
-    subtilte: string
-  }[]
+  avatars: AvatarsList
 }
 
 const AvatarList: React.FC<AvatarListProps> = ({ avatars }) => (
   <Box>
-    {avatars.map((item, idx) => (
-      <Box
-        key={item.name + idx}
-        sx={{ display: 'flex', alignItems: 'center', mb: 2 }}
-      >
-        <Avatar src={item.avatar} alt={item.name} sx={{ mr: 2 }} />
+    {avatars.map((item) => (
+      <Box key={item.id} sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+        <Avatar src={item.src} alt={item.name} sx={{ mr: 2 }} />
         <Box>
           <div>{item.name}</div>
-          <div>{item.subtilte}</div>
+          {item.subtitle && <div>{item.subtitle}</div>}
         </Box>
       </Box>
     ))}
