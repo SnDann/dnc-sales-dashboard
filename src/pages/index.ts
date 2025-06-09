@@ -1,8 +1,5 @@
-    export * from '../components/BannerImage';
-    export * from '../components/Logo';
-    export * from '../components/StyledButton';
-    export * from '../components/StyledInput';
-    export * from '../types/typographies';
-    export { default as FormComponent } from '../types/form.Component';
-    export { default as Header } from '../components/Header'
-
+export { default as Login } from './Login'
+export { default as Registration } from './Registration'
+export { default as Home } from './Home'
+export { default as Leads } from './Leads'
+export { default as Profile } from './Profile'

@@ -7,10 +7,6 @@ export const BannerImageStyled = styled.div`
     width: 50vw;
 `;
 function BannerImage() {
-  return (
-    <>
-      <BannerImageStyled />
-    </>
-  );
+  return <BannerImageStyled />;
 }
 export default BannerImage;
