@@ -1,11 +1,11 @@
-export * from './BannerImage'
-export * from './Logo'
-export * from './StyledButton'
-export * from './StyledInput'
-export * from './Typographies'
-export * from './CardComponent'
-export { default as FormComponent } from './FormComponent'
-export { default as Header } from './Header'
-export { default as CustomTable } from './CustomTable'
-export { default as AvatarList } from './AvatarList'
-export { default as CustomChart } from './CustomChart'
+export * from './BannerImage';
+export * from './Logo';
+export * from './StyledButton';
+export * from './StyledInput';
+export * from './Typographies';
+export * from './CardComponent';
+export { default as FormComponent } from './FormComponent';
+export { default as Header } from './Header';
+export { default as CustomTable } from './CustomTable'; // Included from dev branch
+export { default as AvatarList } from './AvatarList';
+export { default as CustomChart } from './CustomChart'; // Included from dev branch

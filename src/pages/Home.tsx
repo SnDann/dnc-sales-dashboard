@@ -7,22 +7,28 @@ import {
 } from '@/components'
 import { currencyConverter } from '@/utils'
 import { Container } from '@mui/material'
+
 function Home() {
   const mockListData = [
     {
+      name: 'John Doe',
+      subtitle: currencyConverter(1234.56),
       avatar: '/dnc-avatar.jpg',
-      name: 'John',
-      subtilte: currencyConverter(4234),
     },
     {
+      name: 'Jane Smith',
+      subtitle: currencyConverter(7890.12),
       avatar: '/dnc-avatar.jpg',
-      name: 'Daniel',
-      subtilte: currencyConverter(1234),
     },
     {
+      name: 'Mike Brown',
+      subtitle: currencyConverter(3456.78),
       avatar: '/dnc-avatar.jpg',
-      name: 'Jane',
-      subtilte: currencyConverter(5678),
+    },
+    {
+      name: 'Alice Johnson',
+      subtitle: currencyConverter(4567.89),
+      avatar: '/dnc-avatar.jpg',
     },
   ]
 
@@ -46,13 +52,14 @@ function Home() {
       ],
     ],
   }
+
   return (
     <>
       <Header />
       <Container maxWidth="lg">
         <CardComponent>CARD</CardComponent>
         <CardComponent>
-          <AvatarList avatars={mockListData} />
+          <AvatarList listData={mockListData} />
         </CardComponent>
         <CardComponent>
           <CustomTable
