@@ -14,4 +14,12 @@ body, html {
     padding: 0;
     list-style: none;
   }
+
+  .mb-1 {
+      margin-bottom: ${pxToRem(16)} ; 
+  }
+  
+  .mb-2 {
+       argin-bottom: ${pxToRem(32)};
+  }
 `;
