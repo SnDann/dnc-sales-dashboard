@@ -4,7 +4,10 @@ import { AppThemeContext } from '@context/AppThemeContext'
 import { CardComponent, Header, StyledH2, StyledButton } from '@/components'
 import { Container, Grid } from '@mui/material'
 
-import { logout } from '@/services'
+// CORRETO
+import logout from './logout'
+export { logout }
+
 
 function Profile() {
     const themeContext = useContext(AppThemeContext)
