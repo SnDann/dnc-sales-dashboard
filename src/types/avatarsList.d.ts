@@ -1,8 +1,9 @@
-export interface Avatar {
-  id: string
+export type ListDataProps = {
+  avatar: string
   name: string
-  src: string
-  subtitle?: string
+  subtitle: string
 }
 
-export type AvatarsList = Avatar[]
+export interface AvatarListProps {
+  listData: ListDataProps[]
+}
