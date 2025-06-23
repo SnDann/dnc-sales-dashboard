@@ -1,6 +1,9 @@
 export * from './customTable'
-export * from './AvatarsList'     // Corrigido para PascalCase
+export * from './avatarsList'     
 export * from './typographies'
 export * from './theme'
 export * from './form.Component'
 export * from './customChart'
+export * from './highlightsData'
+export * from './starsData'
+export * from './newsData'

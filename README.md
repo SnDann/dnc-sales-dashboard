@@ -5,7 +5,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Expanding the ESLint configuration
 
@@ -52,3 +52,42 @@ export default tseslint.config({
   },
 })
 ```
+
+## Deployment to Vercel
+
+The project is configured for deployment on Vercel:
+
+- Ensure the `vercel.json` file is present in the project root specifying the build output directory (`dist`).
+- Push your changes to the `main` (or your production) branch; Vercel will automatically build and deploy the application.
+- Manual deployments can be triggered via the Vercel dashboard.
+
+## Gitflow Testing Guidelines
+
+Use the Gitflow branching model and include testing steps before merging any branch:
+
+- Feature branches: `feature/<name>`
+- Release branches: `release/<version>`
+- Hotfix branches: `hotfix/<version>`
+
+Important: ensure you are on the `dev` branch before running tests and pushing code:
+
+```bash
+git checkout dev
+```
+
+Before pushing or creating a pull request:
+
+1. Run unit and integration tests:
+   ```bash
+   npm test
+   ```
+2. Run end-to-end tests:
+   ```bash
+   npm run cypress:run
+   ```
+3. Run linting:
+   ```bash
+   npm run lint
+   ```
+
+Include these commands in your CI pipeline for each branch and pull request to ensure code quality and deployment readiness.

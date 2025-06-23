@@ -1,6 +1,21 @@
 import { createGlobalStyle } from "styled-components";
 import type { DefaultTheme } from "styled-components";
 
+// Extend DefaultTheme to include appSkeletonFrom and appSkeletonTo
+declare module "styled-components" {
+  export interface DefaultTheme {
+    appbackground?: string;
+    appcolor?: string;
+    appSkeletonFrom?: string;
+    appSkeletonTo?: string;
+    // add other theme properties as needed
+  }
+}
+
+export function pxToRem(px: number): import("styled-components").Interpolation<{ theme?: DefaultTheme }> {
+  return `${px / 16}rem`;
+}
+
 export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
 body, html {
     background: ${(props) => props.theme?.appbackground};
@@ -22,4 +37,23 @@ body, html {
   .mb-2 {
        argin-bottom: ${pxToRem(32)};
   }
+
+  .skeleton-loading{
+      animation: skeleton-loading 2s infinite alternate;
+  }
+@keyframes skeletonLoading {
+    from{
+        background-color: ${(props) =>props.theme.appSkeletonFrom};
+    }
+        to {
+        background-color: ${(props) => props.theme.appSkeletonTo};
+   }
+}
+  .skeleton-loading-mh-1 {
+    min-heigth: ${pxToRem(175)};
+  }
+    .skeleton-loading-mh-2 {
+    min-heigth: ${pxToRem(400)};
+  }
 `;
+
